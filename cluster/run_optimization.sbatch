@@ -13,8 +13,8 @@
 #SBATCH --partition=batch
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=32        # parallel simulations (the notebook uses all of them)
-#SBATCH --mem=64G
+#SBATCH --cpus-per-task=16        # parallel simulations (the notebook uses all of them)
+#SBATCH --mem=32G
 #SBATCH --time=24:00:00           # adjust after the first run (see the log for the run time)
 #SBATCH --output=slurm-%x-%j.out
 
