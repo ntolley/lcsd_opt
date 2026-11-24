@@ -26,6 +26,7 @@ export OMP_NUM_THREADS=1
 export MKL_NUM_THREADS=1
 export OPENBLAS_NUM_THREADS=1
 export MPLBACKEND=Agg                          # figures are only saved, not shown
+export PYTHONNOUSERSITE=1                      # ignore packages in ~/.local: use only the pixi environment
 
 echo "Job $SLURM_JOB_ID on $(hostname), $SLURM_CPUS_PER_TASK cores"
 echo "Notebook: $NOTEBOOK.ipynb, CLUSTER_RUN=$CLUSTER_RUN"
