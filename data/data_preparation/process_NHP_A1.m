@@ -438,15 +438,12 @@ end
 % '<session> figure standards + MGB.png' : the same figure with rows 5-7 =
 %   its MGB partner ('1-' file with the same name); only for A1 sessions
 %   that have one.
-% MGB sessions whose A1 partner is in the list are shown in the A1 figure;
-% the others get their own figure. Uses the averages saved in step 9.
+% Every session gets its own figure, MGB sessions included (an MGB session
+% with an A1 partner also appears as the bottom row of the partner's
+% '+ MGB' figure). Uses the averages saved in step 9.
 for k = 1:size(sessions, 1)
     session = sessions{k, 1};
     name    = session(3:end);                      % session name without '1-'/'2-'
-    i_a1    = find(strcmp(sessions(:, 1), ['2-' name]));
-    if session(1) == '1' && ~isempty(i_a1) && sessions{i_a1, 5}
-        continue                                   % shown with its A1 partner
-    end
 
     try
         avg_file = fullfile(outdir, [session '_standards_avg.mat']);
