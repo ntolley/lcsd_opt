@@ -1,0 +1,6 @@
+.DS_Store
+.vscode/
+data/1-kk053054026*.mat
+data/cache/
+results/
+slurm-*.out
