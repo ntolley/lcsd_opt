@@ -15,7 +15,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=16        # parallel simulations (the notebook uses all of them)
 #SBATCH --mem=32G
-#SBATCH --time=24:00:00           # adjust after the first run (see the log for the run time)
+#SBATCH --time=48:00:00           # full run estimated ~18 h on 16 cores (test: ~95 s per iteration of 4 networks on 4 cores)
 #SBATCH --output=slurm-%x-%j.out
 
 NOTEBOOK=${1:-erp_mua_csd}                     # notebook name, without .ipynb
